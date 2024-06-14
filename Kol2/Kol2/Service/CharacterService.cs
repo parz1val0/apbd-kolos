@@ -33,7 +33,7 @@ public class CharacterService:ICharacterService
     {
         return await _context.Items.AnyAsync(e => e.id == itemId);
     }
-
+    
     public async Task AddNewBackpack(Backpacks backpack)
     {
         await _context.AddAsync(backpack);
