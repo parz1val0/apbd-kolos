@@ -33,7 +33,13 @@ public class CharacterContext: DbContext
                     CharacterId = 2,
                     ItemId = 2,
                     Amount = 8
-                }
+                },
+                new Backpacks
+                {
+                CharacterId = 3,
+                ItemId = 2,
+                Amount = 8
+            }
             });
 
             modelBuilder.Entity<Items>().HasData(new List<Items>
@@ -49,6 +55,12 @@ public class CharacterContext: DbContext
                     id = 2,
                     Name = "Cola",
                     Weight = 1
+                },
+                new Items()
+                {
+                    id = 3,
+                    Name = "Pistol",
+                    Weight = 4
                 }
             });
             modelBuilder.Entity<Titles>().HasData(new List<Titles>
@@ -81,7 +93,16 @@ public class CharacterContext: DbContext
                     LastName = "Demianchuk",
                     CurrentWeight = 11,
                     MaxWeight = 59
-                }
+                },
+                new Characters()
+                {
+                    id = 3,
+                    FirstName = "Guy",
+                    LastName = "random",
+                    CurrentWeight = 10,
+                    MaxWeight = 60
+                },
+                
             });
             modelBuilder.Entity<CharacterTitels>().HasData(new List<CharacterTitels>
             {
@@ -94,6 +115,12 @@ public class CharacterContext: DbContext
                 new CharacterTitels
                 {
                     CharacterId = 2,
+                    TitelsId = 2,
+                    AcquiredAt = DateTime.Parse("2020-06-05")
+                },
+                new CharacterTitels
+                {
+                    CharacterId = 3,
                     TitelsId = 2,
                     AcquiredAt = DateTime.Parse("2020-06-05")
                 }
